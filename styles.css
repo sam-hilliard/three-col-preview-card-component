@@ -121,6 +121,7 @@ h1 {
     justify-items: center;
     border-radius: 0.5rem;
     overflow: hidden;
+    max-width: 400px;
 }
 
 /* card styles */
@@ -184,4 +185,12 @@ h1 {
 
 .luxury-card .link-btn {
     color: var(--dark-cyan);
+}
+
+/* switch to horizontally aligned cards at larger screen sizes */
+@media (width >= 800px) {
+    .card-container {
+        max-width: 1000px;
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
